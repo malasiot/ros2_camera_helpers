@@ -20,12 +20,14 @@ find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 add_executable(camera_gui
     src/camera_gui.cpp
     src/camera_gui.hpp
     src/image_widget.cpp
     src/image_widget.hpp
+    src/images.qrc
     )
 target_include_directories(camera_gui PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
