@@ -43,7 +43,9 @@ ament_target_dependencies(camera_gui
 )
 target_link_libraries(camera_gui Qt::Core Qt::Gui Qt::Widgets ${OpenCV_LIBS})
 
-
+install(TARGETS camera_gui
+  DESTINATION lib/${PROJECT_NAME})
+  
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
